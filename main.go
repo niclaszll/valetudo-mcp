@@ -35,7 +35,11 @@ func main() {
 
 	server := mcp_golang.NewServer(stdio.NewStdioServerTransport())
 
-	if err := registerTool(server, tools.GetRobotStateDefinition, tools.GetRobotState, valetudoClient); err != nil {
+	if err := registerTool(server, tools.BasicControlDefinition, tools.BasicControl, valetudoClient); err != nil {
+		panic(err)
+	}
+
+	if err := registerTool(server, tools.GetRobotCapabilitiesDefinition, tools.GetRobotCapabilities, valetudoClient); err != nil {
 		panic(err)
 	}
 
@@ -43,7 +47,11 @@ func main() {
 		panic(err)
 	}
 
-	if err := registerTool(server, tools.GetRobotCapabilitiesDefinition, tools.GetRobotCapabilities, valetudoClient); err != nil {
+	if err := registerTool(server, tools.GetRobotStateDefinition, tools.GetRobotState, valetudoClient); err != nil {
+		panic(err)
+	}
+
+	if err := registerTool(server, tools.LocateDefinition, tools.Locate, valetudoClient); err != nil {
 		panic(err)
 	}
 

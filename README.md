@@ -8,6 +8,8 @@ A Go-based MCP server for interacting with Valetudo-powered robot vacuums via th
 - Get basic robot information (manufacturer, model, implementation)
 - Get the list of capabilities supported by the robot
 - Set the Valetudo log level (trace, debug, info, warn, error)
+- Control basic robot functions (start, stop, pause, home)
+- Locate the robot (plays a sound to help find it)
 
 ## Requirements
 
@@ -40,6 +42,8 @@ The MCP server will start and register the following tools:
 - `get_robot_info`: Get basic robot information
 - `get_robot_capabilities`: Get the list of capabilities supported by the robot
 - `set_log_level`: Set the Valetudo log level
+- `basic_control`: Control basic robot functions
+- `locate`: Play a sound to help locate the robot
 
 ## License
 
