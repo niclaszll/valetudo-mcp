@@ -10,6 +10,7 @@ A Go-based MCP server for interacting with Valetudo-powered robot vacuums via th
 - Set the Valetudo log level (trace, debug, info, warn, error)
 - Control basic robot functions (start, stop, pause, home)
 - Locate the robot (plays a sound to help find it)
+- Zone cleaning (clean specific areas of your home)
 
 ## Requirements
 
@@ -44,6 +45,7 @@ The MCP server will start and register the following tools:
 - `set_log_level`: Set the Valetudo log level
 - `basic_control`: Control basic robot functions
 - `locate`: Play a sound to help locate the robot
+- `zone_clean`: Clean specific zones in your home
 
 ## License
 
