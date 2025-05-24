@@ -30,6 +30,7 @@ A Go-based MCP server for interacting with Valetudo-powered robot vacuums via th
    go build -o valetudo-mcp
    ./valetudo-mcp
    ```
+4. Integrate it with your MCP compatible hosts of choice, like Claude Desktop or Cursor.
 
 ## Usage
 
