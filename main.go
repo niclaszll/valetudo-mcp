@@ -59,6 +59,10 @@ func main() {
 		panic(err)
 	}
 
+	if err := registerTool(server, tools.ZoneCleaningDefinition, tools.ZoneCleaning, valetudoClient); err != nil {
+		panic(err)
+	}
+
 	if err := server.Serve(); err != nil {
 		panic(err)
 	}
