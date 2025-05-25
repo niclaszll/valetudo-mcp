@@ -21,6 +21,11 @@ A Go-based MCP server for interacting with Valetudo-powered robot vacuums via th
 
 ## Setup
 
+Feel free to download the latest release from the [releases page](https://github.com/niclaszll/valetudo-mcp/releases).
+Make sure to set the `VALETUDO_URL` environment variable to your Valetudo instance base URL.
+
+If you want to build it yourself, you can do so with the following steps:
+
 1. Clone this repository:
    ```sh
    git clone https://github.com/niclaszll/valetudo-mcp.git
