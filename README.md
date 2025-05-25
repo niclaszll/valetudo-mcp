@@ -2,7 +2,7 @@
 
 ![release](https://github.com/niclaszll/valetudo-mcp/actions/workflows/release.yml/badge.svg)
 
-A Go-based MCP server for interacting with Valetudo-powered robot vacuums via the Valetudo HTTP API. The server provides a set of tools to query robot state, info, capabilities, and control log level, exposing them as MCP tools.
+A Go-based MCP server for interacting with Valetudo-powered robot vacuums via the Valetudo HTTP API.
 
 ## Features
 
