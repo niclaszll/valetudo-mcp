@@ -14,14 +14,18 @@ func registerTool[Args any](
 	def tools.ToolDefinition,
 	handler func(*client.ValetudoClient, Args) (*mcp_golang.ToolResponse, error),
 	valetudoClient *client.ValetudoClient,
-) error {
-	return server.RegisterTool(
+) {
+	err := server.RegisterTool(
 		def.Name,
 		def.Description,
 		func(args Args) (*mcp_golang.ToolResponse, error) {
 			return handler(valetudoClient, args)
 		},
 	)
+
+	if err != nil {
+		panic(err)
+	}
 }
 
 func main() {
@@ -35,33 +39,13 @@ func main() {
 
 	server := mcp_golang.NewServer(stdio.NewStdioServerTransport())
 
-	if err := registerTool(server, tools.BasicControlDefinition, tools.BasicControl, valetudoClient); err != nil {
-		panic(err)
-	}
-
-	if err := registerTool(server, tools.GetRobotCapabilitiesDefinition, tools.GetRobotCapabilities, valetudoClient); err != nil {
-		panic(err)
-	}
-
-	if err := registerTool(server, tools.GetRobotInfoDefinition, tools.GetRobotInfo, valetudoClient); err != nil {
-		panic(err)
-	}
-
-	if err := registerTool(server, tools.GetRobotStateDefinition, tools.GetRobotState, valetudoClient); err != nil {
-		panic(err)
-	}
-
-	if err := registerTool(server, tools.LocateDefinition, tools.Locate, valetudoClient); err != nil {
-		panic(err)
-	}
-
-	if err := registerTool(server, tools.SetLogLevelDefinition, tools.SetLogLevel, valetudoClient); err != nil {
-		panic(err)
-	}
-
-	if err := registerTool(server, tools.ZoneCleaningDefinition, tools.ZoneCleaning, valetudoClient); err != nil {
-		panic(err)
-	}
+	registerTool(server, tools.BasicControlDefinition, tools.BasicControl, valetudoClient)
+	registerTool(server, tools.GetRobotCapabilitiesDefinition, tools.GetRobotCapabilities, valetudoClient)
+	registerTool(server, tools.GetRobotInfoDefinition, tools.GetRobotInfo, valetudoClient)
+	registerTool(server, tools.GetRobotStateDefinition, tools.GetRobotState, valetudoClient)
+	registerTool(server, tools.LocateDefinition, tools.Locate, valetudoClient)
+	registerTool(server, tools.SetLogLevelDefinition, tools.SetLogLevel, valetudoClient)
+	registerTool(server, tools.ZoneCleaningDefinition, tools.ZoneCleaning, valetudoClient)
 
 	if err := server.Serve(); err != nil {
 		panic(err)
