@@ -7,7 +7,7 @@ import (
 	mcp_golang "github.com/metoro-io/mcp-golang"
 )
 
-var ZoneCleaningDefinition = ToolDefinition[ZoneCleaningArgs]{
+var ZoneCleaningDefinition = ToolDefinition{
 	Name:        "zone_cleaning",
 	Description: "Start zone cleaning with specified zones and iterations",
 }

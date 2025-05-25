@@ -7,7 +7,7 @@ import (
 	mcp_golang "github.com/metoro-io/mcp-golang"
 )
 
-var GetRobotStateDefinition = ToolDefinition[GetRobotStateArgs]{
+var GetRobotStateDefinition = ToolDefinition{
 	Name:        "get_robot_state",
 	Description: "Get the current state of the robot including attributes and map",
 }

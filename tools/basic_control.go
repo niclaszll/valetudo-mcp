@@ -7,7 +7,7 @@ import (
 	mcp_golang "github.com/metoro-io/mcp-golang"
 )
 
-var BasicControlDefinition = ToolDefinition[BasicControlArgs]{
+var BasicControlDefinition = ToolDefinition{
 	Name:        "basic_control",
 	Description: "Control basic robot functions (start, stop, pause, home)",
 }

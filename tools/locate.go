@@ -7,7 +7,7 @@ import (
 	mcp_golang "github.com/metoro-io/mcp-golang"
 )
 
-var LocateDefinition = ToolDefinition[LocateArgs]{
+var LocateDefinition = ToolDefinition{
 	Name:        "locate",
 	Description: "Locate the robot",
 }

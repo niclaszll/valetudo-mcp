@@ -11,7 +11,7 @@ import (
 
 func registerTool[Args any](
 	server *mcp_golang.Server,
-	def tools.ToolDefinition[Args],
+	def tools.ToolDefinition,
 	handler func(*client.ValetudoClient, Args) (*mcp_golang.ToolResponse, error),
 	valetudoClient *client.ValetudoClient,
 ) error {

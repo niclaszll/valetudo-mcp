@@ -1,6 +1,6 @@
 package tools
 
-type ToolDefinition[Args any] struct {
+type ToolDefinition struct {
 	Name        string
 	Description string
 }

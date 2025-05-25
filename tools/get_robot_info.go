@@ -7,7 +7,7 @@ import (
 	mcp_golang "github.com/metoro-io/mcp-golang"
 )
 
-var GetRobotInfoDefinition = ToolDefinition[GetRobotInfoArgs]{
+var GetRobotInfoDefinition = ToolDefinition{
 	Name:        "get_robot_info",
 	Description: "Get basic robot information including manufacturer, model, and implementation",
 }

@@ -7,7 +7,7 @@ import (
 	mcp_golang "github.com/metoro-io/mcp-golang"
 )
 
-var SetLogLevelDefinition = ToolDefinition[SetLogLevelArgs]{
+var SetLogLevelDefinition = ToolDefinition{
 	Name:        "set_log_level",
 	Description: "Set the Valetudo log level",
 }
